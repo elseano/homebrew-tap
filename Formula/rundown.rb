@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-alpha.3"
+  version "0.4.0-beta"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-alpha.3/rundown_0.4.0-alpha.3_Darwin_x86_64.tar.gz"
-    sha256 "6ce46af4a6590152b12e15e3ee1f9516c328b73bfeec456c4f99f908b0c75983"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Darwin_x86_64.tar.gz"
+    sha256 "491ae932de451cd555588315648145b2bcd6cda049b710098c16f7909f61312f"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-alpha.3/rundown_0.4.0-alpha.3_Darwin_arm64.tar.gz"
-    sha256 "8956f99dbc8534539d997f644c014e89fe447d9e17ad847c7ebbe830af3f3265"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Darwin_arm64.tar.gz"
+    sha256 "d701e8f1917f5eb0e426efbc1ebf82d40a78ad6d92ad6f532ce894f494a5e978"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-alpha.3/rundown_0.4.0-alpha.3_Linux_x86_64.tar.gz"
-    sha256 "8b16654e00110480efcdde98024e3fa067ddb90e11dc67ae2fa6c6468e0aa9e3"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Linux_x86_64.tar.gz"
+    sha256 "669035e13609532f244a8e87436cc33c907b23f5bf808325c8b7351ac70fceec"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-alpha.3/rundown_0.4.0-alpha.3_Linux_arm64.tar.gz"
-    sha256 "e8c17677d0b937ab56640f7738fa831ac1489282a30909e3d23e6db81c8afed7"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Linux_arm64.tar.gz"
+    sha256 "cef80234ec52b7f297190543c8447f3568a7a23f26bbb6d429f1cd9ccec4d5b0"
   end
 
   def install
