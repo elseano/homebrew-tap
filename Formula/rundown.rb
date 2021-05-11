@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta"
+  version "0.4.0-beta.4"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Darwin_x86_64.tar.gz"
-    sha256 "491ae932de451cd555588315648145b2bcd6cda049b710098c16f7909f61312f"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Darwin_x86_64.tar.gz"
+    sha256 "b891e6afff9ca66ee4484778d7ba623c2e6d30433e69a67a6953a8c85674dd29"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Darwin_arm64.tar.gz"
-    sha256 "d701e8f1917f5eb0e426efbc1ebf82d40a78ad6d92ad6f532ce894f494a5e978"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Darwin_arm64.tar.gz"
+    sha256 "458a6c8d255401187ec6f3631ca92eb58b97f0ee70b38c059ed6fd86d98dcb38"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Linux_x86_64.tar.gz"
-    sha256 "669035e13609532f244a8e87436cc33c907b23f5bf808325c8b7351ac70fceec"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Linux_x86_64.tar.gz"
+    sha256 "87bdde4322e140a19e7c995ddafa75d5f2df098776142fb40411c6e2ea8a1973"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta/rundown_0.4.0-beta_Linux_arm64.tar.gz"
-    sha256 "cef80234ec52b7f297190543c8447f3568a7a23f26bbb6d429f1cd9ccec4d5b0"
+    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Linux_arm64.tar.gz"
+    sha256 "f167cf9f93ce18281a1a6a2e8324494dd60ffd1ad999a5715c476309a6c188a3"
   end
 
   def install
