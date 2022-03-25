@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.4"
+  version "0.4.0-beta.5"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Darwin_x86_64.tar.gz"
-    sha256 "b891e6afff9ca66ee4484778d7ba623c2e6d30433e69a67a6953a8c85674dd29"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_x86_64.tar.gz"
+    sha256 "272e2130a92ae25ec07323b516a04bf3c1cc3dc28ca2a72c43e06ed4f6ac88e5"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Darwin_arm64.tar.gz"
-    sha256 "458a6c8d255401187ec6f3631ca92eb58b97f0ee70b38c059ed6fd86d98dcb38"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_arm64.tar.gz"
+    sha256 "e715f39b3fae49226e4a0eb9d5de7f73940697bdd930f44fa6731cb47aaacdb6"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Linux_x86_64.tar.gz"
-    sha256 "87bdde4322e140a19e7c995ddafa75d5f2df098776142fb40411c6e2ea8a1973"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_x86_64.tar.gz"
+    sha256 "c8ae97baf7a16ae8d14f1d85a8bc42837ad803295fd9c6090f9fc29627b933d2"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/0.4.0-beta.4/rundown_0.4.0-beta.4_Linux_arm64.tar.gz"
-    sha256 "f167cf9f93ce18281a1a6a2e8324494dd60ffd1ad999a5715c476309a6c188a3"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_arm64.tar.gz"
+    sha256 "0183ad7dd3d6947fef8de10f464a0937dbe64a71548d3bf358da0c8f59ab9884"
   end
 
   def install
