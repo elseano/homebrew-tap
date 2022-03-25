@@ -11,19 +11,19 @@ class Rundown < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_x86_64.tar.gz"
-    sha256 "272e2130a92ae25ec07323b516a04bf3c1cc3dc28ca2a72c43e06ed4f6ac88e5"
+    sha256 "e11eb4bb35b742081cdb0b55b398db2adab2e7897a6e902677f93d97c2eaf3a0"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_arm64.tar.gz"
-    sha256 "e715f39b3fae49226e4a0eb9d5de7f73940697bdd930f44fa6731cb47aaacdb6"
+    sha256 "faef756837ad0562004ca1a93dc0694929bc406ebb32da411585ed5b5079386a"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_x86_64.tar.gz"
-    sha256 "c8ae97baf7a16ae8d14f1d85a8bc42837ad803295fd9c6090f9fc29627b933d2"
+    sha256 "e83086567cb0691bd37002cacaa612a553559ff0a7c431ca512d64c8639d18cf"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_arm64.tar.gz"
-    sha256 "0183ad7dd3d6947fef8de10f464a0937dbe64a71548d3bf358da0c8f59ab9884"
+    sha256 "eab8288bc8c46361ab7b34da54090bb819d26e91941609062a198276b2021753"
   end
 
   def install
@@ -39,4 +39,7 @@ class Rundown < Formula
     (fish_completion/"rundown").write output
   end
 
+  test do
+    assert_match "rundown version #{version}", shell_output("#{bin}/rundown --version")
+  end
 end
