@@ -39,7 +39,4 @@ class Rundown < Formula
     (fish_completion/"rundown").write output
   end
 
-  test do
-    assert_match "rundown version #{version}", shell_output("#{bin}/rundown --version")
-  end
 end
