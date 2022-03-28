@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.7"
+  version "0.4.0-beta.8"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Darwin_x86_64.tar.gz"
-    sha256 "4834f6b924ae93f73025aa771556050c1a7a9edf570c3296ab05058a29ece247"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Darwin_x86_64.tar.gz"
+    sha256 "8bd422553caa2cb22234099f2c0386d08c92271543f7bfe22de0f2ce0a0da5f4"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Darwin_arm64.tar.gz"
-    sha256 "dc3b5bf7253238b2638d967f4ac943119f20816af373d136d33606be2b22452b"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Darwin_arm64.tar.gz"
+    sha256 "94e12084357406b66664177bfd174b6724e70e982b8a548a80f9fd6ee2e2ce9f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Linux_x86_64.tar.gz"
-    sha256 "c882243b8b84fbb682c5502c1be6207bbdff8a531bd8fa9900f85a1e4f722a1c"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Linux_x86_64.tar.gz"
+    sha256 "a495c27903eda39bd9dc50492a69d032a5ab156cb860094fc177abe5294da4da"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Linux_arm64.tar.gz"
-    sha256 "9e4eae4b993e07a05ff512096a68754d6495e7e15f81f9840ff751ce916c3c79"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Linux_arm64.tar.gz"
+    sha256 "e9d56a73825bc84a9621b81ddc99927d32b64bec09107fde377f62b2a6ed627c"
   end
 
   def install
