@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.6"
+  version "0.4.0-beta.7"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Darwin_x86_64.tar.gz"
-    sha256 "75ae51214ffc27ccf8d8e4c845bf0128a302e3da996496346f1cbb3ea3ae5f5f"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Darwin_x86_64.tar.gz"
+    sha256 "4834f6b924ae93f73025aa771556050c1a7a9edf570c3296ab05058a29ece247"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Darwin_arm64.tar.gz"
-    sha256 "31b03c29eeeb0f04611bdf6bf7f6923e72425984b2ec8d17d62f48f0c82f5965"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Darwin_arm64.tar.gz"
+    sha256 "dc3b5bf7253238b2638d967f4ac943119f20816af373d136d33606be2b22452b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Linux_x86_64.tar.gz"
-    sha256 "7391a2f12bb33782f73c86ced17ede0d8ae8c1cec688a6bc9536b60835e1946e"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Linux_x86_64.tar.gz"
+    sha256 "c882243b8b84fbb682c5502c1be6207bbdff8a531bd8fa9900f85a1e4f722a1c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Linux_arm64.tar.gz"
-    sha256 "0bc057988e895d808e03f71610c28cf5806d70a56ade2ba7dc7b4762d28a5b04"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.7/rundown_0.4.0-beta.7_Linux_arm64.tar.gz"
+    sha256 "9e4eae4b993e07a05ff512096a68754d6495e7e15f81f9840ff751ce916c3c79"
   end
 
   def install
