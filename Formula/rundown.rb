@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.5"
+  version "0.4.0-beta.6"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_x86_64.tar.gz"
-    sha256 "e11eb4bb35b742081cdb0b55b398db2adab2e7897a6e902677f93d97c2eaf3a0"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Darwin_x86_64.tar.gz"
+    sha256 "75ae51214ffc27ccf8d8e4c845bf0128a302e3da996496346f1cbb3ea3ae5f5f"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Darwin_arm64.tar.gz"
-    sha256 "faef756837ad0562004ca1a93dc0694929bc406ebb32da411585ed5b5079386a"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Darwin_arm64.tar.gz"
+    sha256 "31b03c29eeeb0f04611bdf6bf7f6923e72425984b2ec8d17d62f48f0c82f5965"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_x86_64.tar.gz"
-    sha256 "e83086567cb0691bd37002cacaa612a553559ff0a7c431ca512d64c8639d18cf"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Linux_x86_64.tar.gz"
+    sha256 "7391a2f12bb33782f73c86ced17ede0d8ae8c1cec688a6bc9536b60835e1946e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.5/rundown_0.4.0-beta.5_Linux_arm64.tar.gz"
-    sha256 "eab8288bc8c46361ab7b34da54090bb819d26e91941609062a198276b2021753"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.6/rundown_0.4.0-beta.6_Linux_arm64.tar.gz"
+    sha256 "0bc057988e895d808e03f71610c28cf5806d70a56ade2ba7dc7b4762d28a5b04"
   end
 
   def install
