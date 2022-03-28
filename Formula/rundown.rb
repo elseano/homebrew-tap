@@ -5,25 +5,25 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.8"
+  version "0.4.0-beta.10"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Darwin_x86_64.tar.gz"
-    sha256 "8bd422553caa2cb22234099f2c0386d08c92271543f7bfe22de0f2ce0a0da5f4"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.10/rundown_0.4.0-beta.10_Darwin_x86_64.tar.gz"
+    sha256 "f6b6e5c723edb71564dfeefd89a7b89441862020953b31872f164468ba1ce673"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Darwin_arm64.tar.gz"
-    sha256 "94e12084357406b66664177bfd174b6724e70e982b8a548a80f9fd6ee2e2ce9f"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.10/rundown_0.4.0-beta.10_Darwin_arm64.tar.gz"
+    sha256 "c3b23589d9258595e859192a9011b11183ab9d707cd2b8602e7654656161fe3f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Linux_x86_64.tar.gz"
-    sha256 "a495c27903eda39bd9dc50492a69d032a5ab156cb860094fc177abe5294da4da"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.10/rundown_0.4.0-beta.10_Linux_x86_64.tar.gz"
+    sha256 "7351a55ccb4e74eb49b9cf1190d29851b14dc4de4e15c8e0c1060a742c7b51e9"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.8/rundown_0.4.0-beta.8_Linux_arm64.tar.gz"
-    sha256 "e9d56a73825bc84a9621b81ddc99927d32b64bec09107fde377f62b2a6ed627c"
+    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.10/rundown_0.4.0-beta.10_Linux_arm64.tar.gz"
+    sha256 "486ee27f7681a7bcb02c301233fa01797cb8fac3eaa0ee795f2d0a9629398394"
   end
 
   def install
