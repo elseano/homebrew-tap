@@ -5,38 +5,81 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.19"
+  version "0.4.0-beta.20"
   license "MIT"
-  bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.19/rundown_0.4.0-beta.19_Darwin_x86_64.tar.gz"
-    sha256 "518f9d9124e316a16cdcccda0680404b962bb0402fcdd1af5b458cdb0af326db"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.20/rundown_0.4.0-beta.20_Darwin_arm64.tar.gz"
+      sha256 "4781e599fc73b7f25da1b3d9554a52d1cfe6b61355f3d79d454998e5c11fd956"
+
+      def install
+        bin.install "rundown"
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
+        (bash_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
+        (zsh_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
+        (fish_completion/"rundown").write output
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.20/rundown_0.4.0-beta.20_Darwin_x86_64.tar.gz"
+      sha256 "2246e578969419f661dea1d18769f344cc313e57a96efe6c6b061a412fa1be9f"
+
+      def install
+        bin.install "rundown"
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
+        (bash_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
+        (zsh_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
+        (fish_completion/"rundown").write output
+      end
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.19/rundown_0.4.0-beta.19_Darwin_arm64.tar.gz"
-    sha256 "9292a5df29a8c7d14efb92482556ec4f42b48760d0467c886f537c3155b811ee"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.19/rundown_0.4.0-beta.19_Linux_x86_64.tar.gz"
-    sha256 "23f0a562644ad46e40cf305425f419bfb94a54aaeaad7e610557048996eac9c5"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.19/rundown_0.4.0-beta.19_Linux_arm64.tar.gz"
-    sha256 "f545d0645041fade157c2fffbf48fe4f105d18c5d71ea1ee316e8a2739c25dba"
-  end
 
-  def install
-    bin.install "rundown"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.20/rundown_0.4.0-beta.20_Linux_arm64.tar.gz"
+      sha256 "71085e268b3d03f6d346897826791e5bb3bba9ab10eaf38303e2bf019355f75b"
 
-    output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
-    (bash_completion/"rundown").write output
+      def install
+        bin.install "rundown"
 
-    output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
-    (zsh_completion/"rundown").write output
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
+        (bash_completion/"rundown").write output
 
-    output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
-    (fish_completion/"rundown").write output
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
+        (zsh_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
+        (fish_completion/"rundown").write output
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.20/rundown_0.4.0-beta.20_Linux_x86_64.tar.gz"
+      sha256 "748700e844f110393184e742fef1d1e48efc055e56e80d7266a387f6631fa5bc"
+
+      def install
+        bin.install "rundown"
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
+        (bash_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
+        (zsh_completion/"rundown").write output
+
+        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
+        (fish_completion/"rundown").write output
+      end
+    end
   end
 
   test do
