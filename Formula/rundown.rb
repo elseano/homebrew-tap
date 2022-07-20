@@ -16,14 +16,14 @@ class Rundown < Formula
       def install
         bin.install "rundown"
 
-        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
-        (bash_completion/"rundown").write output
+#         output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "bash")
+#         (bash_completion/"rundown").write output
 
-        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
-        (zsh_completion/"rundown").write output
+#         output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "zsh")
+#         (zsh_completion/"rundown").write output
 
-        output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
-        (fish_completion/"rundown").write output
+#         output = Utils.safe_popen_read("#{bin}/rundown", "--completions", "fish")
+#         (fish_completion/"rundown").write output
       end
     end
     if Hardware::CPU.intel?
