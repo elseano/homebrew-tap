@@ -5,13 +5,13 @@
 class Rundown < Formula
   desc "Rundown runs Markdown files, making them powerful and pretty console applications"
   homepage "https://github.com/elseano/rundown"
-  version "0.4.0-beta.27"
+  version "0.4.0-beta.31"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.27/rundown_0.4.0-beta.27_Darwin_arm64.tar.gz"
-      sha256 "69a2ae32e1c1896e487c8ae7644235a4175db6ea9b063d6776e91bf8354cac87"
+    if Hardware::CPU.intel?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.31/rundown_0.4.0-beta.31_darwin_x86_64.tar.gz"
+      sha256 "282804775f8ea8e5d885d4802e801e0c371da5bd18345cefa5480756e4edb5c7"
 
       def install
         bin.install "rundown"
@@ -26,9 +26,9 @@ class Rundown < Formula
         (fish_completion/"rundown").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.27/rundown_0.4.0-beta.27_Darwin_x86_64.tar.gz"
-      sha256 "1a0e624cecd777b4dd152f4330517f8b9c5b954a3d53f6fac79808154ca34ec5"
+    if Hardware::CPU.arm?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.31/rundown_0.4.0-beta.31_darwin_arm64.tar.gz"
+      sha256 "4a205e0a1a0defab845bb11df4990b86cc590f6b0168b3dcf1a4f2fbe347e952"
 
       def install
         bin.install "rundown"
@@ -46,9 +46,9 @@ class Rundown < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.27/rundown_0.4.0-beta.27_Linux_arm64.tar.gz"
-      sha256 "9fe1f906c6a4331e7767f3c8788f7b51d0e778f2a481e7891e82dfdb36544be9"
+    if Hardware::CPU.intel?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.31/rundown_0.4.0-beta.31_linux_x86_64.tar.gz"
+      sha256 "bbc4232584ec96de810687d16edc5a8f6594bc47efe803c77757a93d59440fff"
 
       def install
         bin.install "rundown"
@@ -63,9 +63,9 @@ class Rundown < Formula
         (fish_completion/"rundown").write output
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.27/rundown_0.4.0-beta.27_Linux_x86_64.tar.gz"
-      sha256 "83ea7e59c920d8acba3e1e5f6950d771ccc31a6dddb8ef278bfa67111dfafbe3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/elseano/rundown/releases/download/v0.4.0-beta.31/rundown_0.4.0-beta.31_linux_arm64.tar.gz"
+      sha256 "bb632082715281f26e70242645e26ef926eed277e9287516c0d07d568e30c93f"
 
       def install
         bin.install "rundown"
